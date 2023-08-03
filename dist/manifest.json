@@ -1,8 +1,8 @@
 {
-    "name": "eshop.eline.cz",
-    "short_name" : "eshop.eline.cz",
-    "start_url": "https://eshop.eline.cz/",
-    "scope" : "https://eshop.eline.cz/",
+    "name": "rubej.cz",
+    "short_name" : "rubej.cz",
+    "start_url": "https://rubej.cz/",
+    "scope" : "https://rubej.cz/",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone",

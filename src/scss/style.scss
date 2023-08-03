@@ -140,7 +140,10 @@ section.products h1 {
 }
 
 
-
+main{
+    display: flex;
+    flex-direction: column;
+}
 
 #darkBackdrop {
     display: flex;

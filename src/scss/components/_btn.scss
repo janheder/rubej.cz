@@ -2,6 +2,7 @@
     color: $white;
     font-size: 15px;
     min-height: 52px;
+    border-radius: 26px;
     height: 100%;
     padding: 0rem 30px;
     background: $gray-900;
@@ -47,9 +48,10 @@
 }
 
 .btn.--cart{
-    background: $red-500;
+    background: $green-500;
     width: 100%;
     height: 62px;
+    border-radius: 31px;
 
     &:hover, &:active, &:focus{
         background: $black;
