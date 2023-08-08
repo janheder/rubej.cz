@@ -10,7 +10,7 @@ input, select{
     font-size: 15px;
     background-color: $white;
     color: $gray-900;
-
+    border-radius: $border-radius-primary;
 }
 .form-group input{
     &:required:valid{

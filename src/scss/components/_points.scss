@@ -1,6 +1,19 @@
 .points{
     padding-top: 20px;
     padding-bottom: 60px;
+    margin-bottom: 60px;
+    position: relative;
+}
+.points .container::after{
+    content: "";
+    background: $gray-300;
+    height: 1px;
+    width: 1300px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 20px;
+    position: absolute;
 }
 .points-single{
     display: flex;
@@ -30,6 +43,8 @@
 @media screen and (max-width: 991px){
     .points{
         padding-top: 0;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
     }
     .points-single{
         padding: 20px 0;
