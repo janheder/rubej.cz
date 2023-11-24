@@ -119,6 +119,129 @@
           }); 
       });
     </script>
+    <div class="modal micromodal-slide" id="modal-poptat">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-poptat-title">
+          <div class="modal__content" id="modal-poptat-content">
+            <div class="modal__header">
+              <h2 class="modal__title" id="modal-poptat-title">Formulář poptání produktu</h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
+            <form method="post" id="poptat-form">
+              <div class="form-group"> 
+                <label for="poptat-jmeno">Jméno a příjmení</label>
+                <input type="text" id="poptat-jmeno" name="poptat-jmeno" required>
+              </div>
+              <div class="form-group"> 
+                <label for="poptat-email">Email</label>
+                <input type="email" id="poptat-email" name="poptat-email" required>
+              </div>
+              <div class="form-group"> 
+                <label for="poptat-tel">Telefon</label>
+                <input type="tel" id="poptat-tel" name="poptat-tel" required>
+              </div>
+              <div class="form-group"> 
+                <label for="poptat-info">Doplňující informace</label>
+                <textarea id="poptat-info" name="poptat-info" rows="3"></textarea>
+              </div>
+              <div class="form-group --checkbox">
+                <label for="poptat-agree">Souhlasím se <a href="#">zpracováním osobních údajů</a>.</label>
+                <input type="checkbox" name="poptat-agree" id="poptat-agree" required>
+              </div>
+              <div class="form-group"> 
+                <button class="btn --fullWidth" name="poptat-submit" id="poptat-submit">Odeslat poptávku <img src="img/icons/cheveron-white.svg" alt="Odeslat poptávku"></button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal micromodal-slide" id="modal-poptat2">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-poptat2-title">
+          <div class="modal__content" id="modal-poptat2-content">
+            <div class="modal__header">
+              <h2 class="modal__title" id="modal-poptat2-title">Poptání polykarbonátů na míru</h2>
+              <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+            </div>
+            <form method="post" id="poptat2-form">
+              <div class="form-group"> 
+                <label for="poptat2-jmeno">Jméno a příjmení</label>
+                <input type="text" id="poptat-jmeno" name="poptat2-jmeno" required>
+              </div>
+              <div class="form-group"> 
+                <label for="poptat2-email">Email</label>
+                <input type="email" id="poptat2-email" name="poptat2-email" required>
+              </div>
+              <div class="form-group"> 
+                <label for="poptat2-tel">Telefon</label>
+                <input type="tel" id="poptat2-tel" name="poptat2-tel" required>
+              </div>
+              <div class="form-group"> 
+                <label for="poptat2-typ">Výběr typu polykarbonátu</label>
+                <select id="poptat2-typ" name="poptat2-typ" required>
+                  <option>Zvolit typ</option>
+                  <option value="0">dutinkový (komůrkový)</option>
+                  <option value="1">plný (bezkomůrkový) ve vzhledu plexiskla</option>
+                </select>
+              </div>
+              <div class="form-group"> 
+                <label for="poptat2-color">Výběr barvy</label>
+                <select id="poptat2-color" name="poptat2-color" required>
+                  <option>Zvolit barvu</option>
+                  <option>čirá</option>
+                  <option>bronzová</option>
+                  <option>opálová(mléčná)</option>
+                </select>
+              </div>
+              <div class="form-group" id="komurkovy" style="display: none;">
+                <label for="poptat2-size">Síla stěny (mm) jen komůrkový</label>
+                <select id="poptat2-size" name="poptat2-size" required>
+                  <option>Vybrat</option>
+                  <option>4</option>
+                  <option>6</option>
+                  <option>8</option>
+                  <option>10</option>
+                  <option>16</option>
+                </select>
+              </div>
+              <div class="form-group" id="plny" style="display: none;">
+                <label for="poptat2-size2">Síla stěny (mm) jen plný</label>
+                <select id="poptat2-size2" name="poptat2-size2" required>
+                  <option>Vybrat</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  <option>6</option>
+                </select>
+              </div>
+              <div class="form-group"> 
+                <label for="poptat2-info">Doplňující informace</label>
+                <textarea id="poptat2-info" name="poptat2-info" rows="3"></textarea>
+              </div>
+              <div class="form-group --checkbox">
+                <label for="poptat2-agree">Souhlasím se <a href="#">zpracováním osobních údajů</a>.</label>
+                <input type="checkbox" name="poptat2-agree" id="poptat2-agree" required>
+              </div>
+              <div class="form-group"> 
+                <button class="btn --fullWidth" name="poptat2-submit" id="poptat2-submit">Přihlásit <img src="img/icons/cheveron-white.svg" alt="Přihlásit"></button>
+              </div>
+              <script>
+                document.getElementById('poptat2-typ').addEventListener('change', function () {
+                    var style = this.value == 0 ? 'flex' : 'none';
+                    document.getElementById('komurkovy').style.display = style;
+                
+                    var style2 = this.value == 1 ? 'flex' : 'none';
+                    document.getElementById('plny').style.display = style2;
+                });
+              </script>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
     <header>
       <div class="header-top">
         <div class="container"> 
@@ -573,16 +696,17 @@
                 <p class="product-detail__text">Nabízíme náš dřevěný CARMEN VI BOX / KONTEJNER - přírodní, ekologický kontejner. Výsuvný box na dvě vína z přírodního dřeva s rukojetí - rukojetí z přírodního... <a href="#productDescription">Číst více</a></p>
                 <form class="product-detail__form" method="post">
                   <div class="product-detail__stock" id="stock" data-status="active">Skladem</div>
-                  <div class="product-detail__price"> 
-                    <div class="product-detail__priceMain"><span id="price-old">1 200 Kč</span> <span id="price-main">1 118 Kč</span></div>
-                    <div class="product-detail__priceVAT"><span id="price-vat">923,97 Kč</span> bez DPH</div>
-                  </div>
                   <div class="product-detail__cta"> 
-                    <div class="product-detail__qty stepper" id="qty-stepper"> <span class="minus">–</span>
-                      <input id="qty-stepper-input" type="number" value="1" min="1" max="100" step="1" aria-label="Počet položek" required><span class="plus">+</span>
+                    <div class="product-detail__price"> 
+                      <div class="product-detail__priceMain"><span id="price-old">od 1 200 Kč</span> <span id="price-main">od 1 118 Kč</span></div>
+                      <div class="product-detail__priceVAT"><span id="price-vat">od 923,97 Kč</span> bez DPH</div>
                     </div>
-                    <div class="product-detail__button"> 
-                      <button class="btn --green" name="add-to-cart"><img src="img/icons/cart-white.svg" alt="Vložit do košíku"> Vložit do košíku</button>
+                    <div class="product-detail__cta-wrap">
+                      <div class="btn --green" data-micromodal-trigger="modal-poptat"><img src="img/icons/cart-white.svg" alt="Vložit do košíku"> Poptat </div>
+                    </div>
+                    <div class="product-detail__cta-wrap">
+                      <h4>Chcete nařezat desku na míru?</h4>
+                      <div class="btn --green" data-micromodal-trigger="modal-poptat2"><img src="img/icons/cart-white.svg" alt="Vložit do košíku"> Poptat </div>
                     </div>
                   </div>
                 </form>

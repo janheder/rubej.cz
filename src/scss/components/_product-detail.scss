@@ -112,7 +112,7 @@
 .variants{
     padding-bottom: 40px;
     width: 100%;
-    max-width: 420px;
+    //max-width: 420px;
 }
 .variants__title{
     font-size: 14px;
@@ -196,12 +196,12 @@
 .product-detail__stock{
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 15px;
     line-height: 1;
     color: $gray-500;
     text-transform: uppercase;
     margin-bottom: 40px;
-    font-weight: 500;
+    font-weight: 600;
     height: 16px;
 }
 .product-detail__stock img{
@@ -259,16 +259,23 @@
 
     span, input{
         height: 62px;
+        border-radius: 31px;
     }
 }
 .product-detail__qty.stepper span{
-    width: 54px;
+    width: 50px;
+    height: 50px;
+
 }
 .product-detail__cta-wrap{
     display: flex;
+    flex-wrap: wrap;
+}
+.product-detail__cta-wrap h4{
+    width: 100%;
 }
 .product-detail__button{
-    margin-left: 10px;
+    margin-left: 15px;
     z-index: 0;
 }
 .product-detail__button button{

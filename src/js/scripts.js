@@ -1,29 +1,4 @@
 // -----------------------------------------------------------------------------
-// COOKIEBAR
-// -----------------------------------------------------------------------------
-
-
-var cookiebar = new Cookiebar({
-    id: "cookiebar",
-    cls: "cookiebar",
-    cookie: "cookiebar",
-    content: {
-        description: "Tato stránka používá cookies za účelem optimalizace efektivního poskytování služeb.",
-        link: "Více informací",
-        href: "http://ec.europa.eu/ipg/basics/legal/cookies/index_en.htm",
-        button: "Rozumím",
-        more: "..."
-    },
-    fade: {
-        type: "in",
-        ms: "500",
-        display: "inline"
-    },
-    debug: 0
-});
-
-
-// -----------------------------------------------------------------------------
 // LAZYLAOD INIT
 // -----------------------------------------------------------------------------
 
@@ -378,6 +353,36 @@ if(document.getElementById('register-form')){
 }
 
 
+document.addEventListener(
+    "ppl-parcelshop-map",
+    (event) => {
+        // vygenerujeme input prvky
+        //console.log("Vybraný parcel shop:", event.detail)
+        //alert(JSON.stringify(event.detail.id));
+        var ppl_parcel_id = JSON.stringify(event.detail.id);
+        var ppl_parcel_code = JSON.stringify(event.detail.code);
+        var ppl_parcel_shopname = JSON.stringify(event.detail.parcelshopName);
+        var ppl_parcel_name = JSON.stringify(event.detail.name);
+        var ppl_parcel_street = JSON.stringify(event.detail.street);
+        var ppl_parcel_city = JSON.stringify(event.detail.city);
+        var ppl_parcel_zip = JSON.stringify(event.detail.zipCode);
+        var ppl_parcel_country = JSON.stringify(event.detail.country);
+        
+        var ppl_parcel_adr = ppl_parcel_id+"|"+ppl_parcel_code.replace(/['"]+/g, '')+"|"+ppl_parcel_shopname.replace(/['"]+/g, '')+"|"+ppl_parcel_name.replace(/['"]+/g, '')+"|"+ppl_parcel_street.replace(/['"]+/g, '')+"|"+ppl_parcel_city.replace(/['"]+/g, '')+"|"+ppl_parcel_zip.replace(/['"]+/g, '')+"|"+ppl_parcel_country.replace(/['"]+/g, '');
+        document.getElementById("ppl_parcel_inp").value = ppl_parcel_adr;
+        document.getElementById("ppl_parcel_adr_obal").innerHTML = "Odběrné místo: "+ppl_parcel_name.replace(/['"]+/g, '')+"<br>"+ppl_parcel_street.replace(/['"]+/g, '')+", "+ppl_parcel_city.replace(/['"]+/g, '')+", "+ppl_parcel_zip.replace(/['"]+/g, '')+", "+ppl_parcel_country.replace(/['"]+/g, '');
+        
+        $('#modal-ppl').modal('hide');
+    }
+    );
+    
+    
+    
+    
+
+
+
+
 // -----------------------------------------------------------------------------
 // PASSWORD SHOW
 // -----------------------------------------------------------------------------
@@ -408,6 +413,7 @@ if(document.getElementById('showRegisterPassword')
     }
 }
 
+
 if(document.getElementById('showCartRegisterPassword')
 ){
     document.getElementById('showCartRegisterPassword').onclick = function() {
@@ -421,25 +427,3 @@ if(document.getElementById('showCartRegisterPassword')
 }
 
 
-document.addEventListener(
-"ppl-parcelshop-map",
-(event) => {
-	// vygenerujeme input prvky
-	//console.log("Vybraný parcel shop:", event.detail)
-	//alert(JSON.stringify(event.detail.id));
-	var ppl_parcel_id = JSON.stringify(event.detail.id);
-	var ppl_parcel_code = JSON.stringify(event.detail.code);
-	var ppl_parcel_shopname = JSON.stringify(event.detail.parcelshopName);
-	var ppl_parcel_name = JSON.stringify(event.detail.name);
-	var ppl_parcel_street = JSON.stringify(event.detail.street);
-	var ppl_parcel_city = JSON.stringify(event.detail.city);
-	var ppl_parcel_zip = JSON.stringify(event.detail.zipCode);
-	var ppl_parcel_country = JSON.stringify(event.detail.country);
-	
-	var ppl_parcel_adr = ppl_parcel_id+"|"+ppl_parcel_code.replace(/['"]+/g, '')+"|"+ppl_parcel_shopname.replace(/['"]+/g, '')+"|"+ppl_parcel_name.replace(/['"]+/g, '')+"|"+ppl_parcel_street.replace(/['"]+/g, '')+"|"+ppl_parcel_city.replace(/['"]+/g, '')+"|"+ppl_parcel_zip.replace(/['"]+/g, '')+"|"+ppl_parcel_country.replace(/['"]+/g, '');
-	document.getElementById("ppl_parcel_inp").value = ppl_parcel_adr;
-	document.getElementById("ppl_parcel_adr_obal").innerHTML = "Odběrné místo: "+ppl_parcel_name.replace(/['"]+/g, '')+"<br>"+ppl_parcel_street.replace(/['"]+/g, '')+", "+ppl_parcel_city.replace(/['"]+/g, '')+", "+ppl_parcel_zip.replace(/['"]+/g, '')+", "+ppl_parcel_country.replace(/['"]+/g, '');
-	
-	$('#modal-ppl').modal('hide');
-}
-);

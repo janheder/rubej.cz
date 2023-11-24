@@ -1,0 +1,86 @@
+.modal.micromodal-slide(id="modal-poptat2")
+
+  .modal__overlay(tabindex="-1" data-micromodal-close)
+
+
+    .modal__container(role="dialog" aria-modal="true" aria-labelledby="modal-poptat2-title")
+
+        .modal__content(id="modal-poptat2-content")
+
+            .modal__header
+                h2.modal__title(id="modal-poptat2-title") Poptání polykarbonátů na míru
+
+                button.modal__close(aria-label="Close modal" data-micromodal-close)
+
+
+            
+            form(method="post" id="poptat2-form")
+                .form-group 
+                    label(for="poptat2-jmeno") Jméno a příjmení
+                    input(type="text" id="poptat-jmeno" name="poptat2-jmeno" required)
+                .form-group 
+                    label(for="poptat2-email") Email
+                    input(type="email" id="poptat2-email" name="poptat2-email" required)
+
+                .form-group 
+                    label(for="poptat2-tel") Telefon
+                    input(type="tel" id="poptat2-tel" name="poptat2-tel" required)
+
+                .form-group 
+                    label(for="poptat2-typ") Výběr typu polykarbonátu
+                    select(id="poptat2-typ" name="poptat2-typ" required)
+                        option Zvolit typ
+                        option(value="0") dutinkový (komůrkový)
+                        option(value="1") plný (bezkomůrkový) ve vzhledu plexiskla
+
+                .form-group 
+                    label(for="poptat2-color") Výběr barvy
+                    select(id="poptat2-color" name="poptat2-color" required)
+                        option Zvolit barvu
+                        option čirá
+                        option bronzová
+                        option opálová(mléčná)
+
+                .form-group(id="komurkovy" style="display: none;")
+                    label(for="poptat2-size") Síla stěny (mm) jen komůrkový
+                    select(id="poptat2-size" name="poptat2-size" required)
+                        option Vybrat
+                        option 4
+                        option 6
+                        option 8
+                        option 10
+                        option 16
+
+                .form-group(id="plny" style="display: none;")
+                    label(for="poptat2-size2") Síla stěny (mm) jen plný
+                    select(id="poptat2-size2" name="poptat2-size2" required)
+                        option Vybrat
+                        option 1
+                        option 2
+                        option 3
+                        option 4
+                        option 5
+                        option 6
+
+
+                .form-group 
+                    label(for="poptat2-info") Doplňující informace
+                    textarea(id="poptat2-info" name="poptat2-info" rows="3")
+    
+                .form-group.--checkbox
+                    label(for="poptat2-agree") Souhlasím se #[a(href="#") zpracováním osobních údajů].
+                    input(type="checkbox" name="poptat2-agree" id="poptat2-agree" required)
+
+                .form-group 
+                    button.btn.--fullWidth(name="poptat2-submit" id="poptat2-submit") Přihlásit #[img(src="img/icons/cheveron-white.svg" alt="Přihlásit")]
+
+
+                
+                script.
+                    document.getElementById('poptat2-typ').addEventListener('change', function () {
+                        var style = this.value == 0 ? 'flex' : 'none';
+                        document.getElementById('komurkovy').style.display = style;
+
+                        var style2 = this.value == 1 ? 'flex' : 'none';
+                        document.getElementById('plny').style.display = style2;
+                    });

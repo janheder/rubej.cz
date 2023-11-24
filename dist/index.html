@@ -852,6 +852,26 @@
           </div>
         </div>
       </section>
+      <div id="editorjs"> </div>
+      <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+      <script>
+        const editor = new EditorJS({ 
+        /** 
+        * Id of Element that should contain the Editor 
+        */ 
+        holder: 'editorjs', 
+        
+        /** 
+        * Available Tools list. 
+        * Pass Tool's class or Settings object for each Tool you want to use 
+        */ 
+        tools: { 
+            header: Header  
+        }, 
+        })
+        
+      </script>
     </main>
     <footer>
       <div class="container">

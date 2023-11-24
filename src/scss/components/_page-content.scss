@@ -62,13 +62,20 @@
 }
 .page-content p, .page-content strong, .page-content b, .page-content i, .page-content u{
     display: block;
-    color: $gray-500;
+    color: $gray-900;
     margin-bottom: 40px;
     line-height: 1.75;
 }
 .page-content p strong, .page-content p b, .page-content p i, .page-content p u{
     display: inline-block;
 }
+.page-content p > strong{
+    margin: 0;
+}
+.page-content li strong {
+    margin: 0;
+}
+.page-content li
 .page-content ul{
     margin: 0;
     padding-bottom: 40px;

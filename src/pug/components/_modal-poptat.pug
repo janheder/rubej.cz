@@ -1,0 +1,43 @@
+.modal.micromodal-slide(id="modal-poptat")
+
+  .modal__overlay(tabindex="-1" data-micromodal-close)
+
+
+    .modal__container(role="dialog" aria-modal="true" aria-labelledby="modal-poptat-title")
+
+        .modal__content(id="modal-poptat-content")
+
+            .modal__header
+                h2.modal__title(id="modal-poptat-title") Formulář poptání produktu
+
+                button.modal__close(aria-label="Close modal" data-micromodal-close)
+
+
+            
+            form(method="post" id="poptat-form")
+                .form-group 
+                    label(for="poptat-jmeno") Jméno a příjmení
+                    input(type="text" id="poptat-jmeno" name="poptat-jmeno" required)
+                .form-group 
+                    label(for="poptat-email") Email
+                    input(type="email" id="poptat-email" name="poptat-email" required)
+
+                .form-group 
+                    label(for="poptat-tel") Telefon
+                    input(type="tel" id="poptat-tel" name="poptat-tel" required)
+
+                .form-group 
+                    label(for="poptat-info") Doplňující informace
+                    textarea(id="poptat-info" name="poptat-info" rows="3")
+
+                .form-group.--checkbox
+                    label(for="poptat-agree") Souhlasím se #[a(href="#") zpracováním osobních údajů].
+                    input(type="checkbox" name="poptat-agree" id="poptat-agree" required)
+
+
+                .form-group 
+                    button.btn.--fullWidth(name="poptat-submit" id="poptat-submit") Odeslat poptávku #[img(src="img/icons/cheveron-white.svg" alt="Odeslat poptávku")]
+
+
+                
+

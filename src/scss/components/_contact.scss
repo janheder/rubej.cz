@@ -47,6 +47,7 @@
     background-size: 100%;
     height: 42px;
     width: 42px;
+    flex-shrink: 0;
 }
 .contact__item:first-child::before{
     background-image: url("/img/footer-envelope.svg");
@@ -59,6 +60,7 @@
     display: flex;
     flex-direction: column;
     font-weight: 500;
+    line-height: 1.2;
 }
 .contact__text small{
     font-size: 14px;
@@ -117,6 +119,7 @@
         padding-left: 20px;
         flex-grow: 1;
         flex-shrink: 0;
+        gap: 30px;
     }
     .contact__img{
         display: none;
@@ -136,7 +139,8 @@
     .contact__wrap{
         padding-left: 0px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        gap: 15px;
     }
     .contact__item{
         padding-right: 20px;
@@ -153,6 +157,6 @@
         padding: 30px 20px;
     }
     .contact__wrap{
-        flex-direction: column;
+        
     }
 }

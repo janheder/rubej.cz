@@ -1,8 +1,8 @@
 {
     "name": "rubej.cz",
     "short_name" : "rubej.cz",
-    "start_url": "https://rubej.cz/",
-    "scope" : "https://rubej.cz/",
+    "start_url": "https://www.rubej.cz/",
+    "scope" : "https://www.rubej.cz/",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "standalone",
