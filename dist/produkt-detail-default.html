@@ -218,6 +218,16 @@
                 </select>
               </div>
               <div class="form-group"> 
+                <label>Šířka x Výška (mm)</label>
+                <div class="form-group-combined">
+                  <div class="form-group-combined-col">
+                    <input type="num" id="poptat2-sirka" name="poptat2-sirka"><span>x</span>
+                    <input type="num" id="poptat2-delka" name="poptat2-delka">
+                  </div>
+                  <div class="form-group-combined-col"><img src="img/sirka_vyska.png" style="height: 320px;"></div>
+                </div>
+              </div>
+              <div class="form-group"> 
                 <label for="poptat2-info">Doplňující informace</label>
                 <textarea id="poptat2-info" name="poptat2-info" rows="3"></textarea>
               </div>
@@ -703,14 +713,12 @@
                     </div>
                     <div class="product-detail__cta-wrap">
                       <div class="product-detail__button"> 
-                        <div class="btn --green" data-micromodal-trigger="modal-poptat"><img src="img/icons/cart-white.svg" alt="Vložit do košíku"> Poptat produkt</div>
+                        <div class="btn --green" data-micromodal-trigger="modal-poptat"><img src="img/icons/cart-white.svg" alt="Poptat produkt"> Poptat produkt</div>
                       </div>
                     </div>
-                    <div class="product-detail__cta-wrap">
+                    <div class="product-detail__cta-wrap --custom">
                       <h4>Chcete nařezat desku na míru?</h4>
-                      <div class="product-detail__button"> 
-                        <div class="btn --green" data-micromodal-trigger="modal-poptat2"><img src="img/icons/cart-white.svg" alt="Vložit do košíku"> Poptat produkt</div>
-                      </div>
+                      <div class="namiru_btn" data-micromodal-trigger="modal-poptat2"><img src="img/icons/measure.svg" alt="Vyplnit formulář"> Vyplnit formulář</div>
                     </div>
                   </div>
                 </form>
