@@ -92,8 +92,8 @@ html(lang=lang)
                                         .variants__list-wrap
                                             .variants__list
 
-                                                .variants__item.default.--active(data-code="Zvolte variantu" data-stockstatus="default" data-stock="Zvolte variantu" data-priceold="od 1 500 Kč" data-price="od 1 200 Kč" data-pricevat="od 923 Kč") 
-                                                    input(type="radio" name="variant-empty" id="variantId" value="123" aria-label="Zvolte variantu" required)
+                                                .variants__item.default(data-code="Zvolte variantu" data-stockstatus="default" data-stock="Zvolte variantu" data-priceold="od 1 500 Kč" data-price="od 1 200 Kč" data-pricevat="od 923 Kč") 
+                                                    input(type="radio" name="variant" id="variantId" value="123" aria-label="Zvolte variantu" required)
                                                     .variants__item-text Zvolte variantu
 
                                                 .variants__item(data-code="1" data-stockstatus="active" data-stock="Skladem 10ks" data-priceold="1 500 Kč" data-price="1 200 Kč" data-pricevat="923 Kč") 
@@ -101,8 +101,8 @@ html(lang=lang)
                                                     img(src="img/logo.svg" alt="Černý lak + prosklená dvířka" data-src="img/product-thumb-large.jpg")
                                                     .variants__item-text Černý lak + prosklená dvířka
 
-                                                .variants__item(data-code="2" data-stockstatus="disabled" data-stock="Nedostupné" data-priceold="150 Kč" data-price="100 Kč" data-pricevat="80 Kč") 
-                                                    input(type="radio" name="variant" id="variantId2" value="123" aria-label="Zelená barva s neprůhlednými dvířky" required)
+                                                .variants__item.--active(data-code="2" data-stockstatus="disabled" data-stock="Nedostupné" data-priceold="150 Kč" data-price="100 Kč" data-pricevat="80 Kč") 
+                                                    input(type="radio" name="variant" id="variantId2" value="123" aria-label="Zelená barva s neprůhlednými dvířky" required checked)
                                                     img(src="img/product-thumb-small.jpg" alt="Zelená barva s neprůhlednými dvířky" data-src="img/product-thumb-large.jpg")
                                                     .variants__item-text Zelená barva s neprůhlednými dvířky
 
